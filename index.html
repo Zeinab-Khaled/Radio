@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Radio</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- endbuild -->
+    
+  </head>
+  <body id="index">
+      <div id="player">
+         <div class="navbar">
+            <i class="fas fa-angle-left fa-4x"></i>
+            <h1>stations</h1>
+            <i class="fas fa-power-off fa-4x" onclick="clearStationList()"></i>
+         </div>
+         <div class="stations">
+            <ul id="stationList">
+              <li>
+                <div class="stationDetails">
+                  <i class="fas fa-minus"></i> 
+                  <img class="logo" src="images/stationlogo.png">
+                  <i class="fas fa-plus"></i>
+                </div>
+                <span class="stationName nonActive" onclick="toggleStation(this)">Putin FM</span>
+                <span class="stationFrequency">66,6</span>
+              </li>
+               <li>
+                  <div class="stationDetails">
+                    <i class="fas fa-minus"></i> 
+                    <img class="logo" src="images/stationlogo.png">
+                    <i class="fas fa-plus"></i>
+                  </div>
+                  <span class="stationName nonActive" onclick="toggleStation(this)">Dribble FM</span>
+                  <span class="stationFrequency">101,2</span>
+               </li>
+               <li>
+                  <div class="stationDetails">
+                    <i class="fas fa-minus"></i> 
+                    <img class="logo" src="images/stationlogo.png">
+                    <i class="fas fa-plus"></i>
+                  </div>
+                  <span class="stationName nonActive" onclick="toggleStation(this)">Doge FM</span>
+                  <span class="stationFrequency">99,4</span>
+               </li>
+               <li>
+                  <div class="stationDetails">
+                    <i class="fas fa-minus"></i> 
+                    <img class="logo" src="images/stationlogo.png">
+                    <i class="fas fa-plus"></i>
+                  </div>
+                  <span class="stationName nonActive" onclick="toggleStation(this)">Ballads FM</span>
+                  <span class="stationFrequency">87,1</span>
+               </li>
+               <li>
+                  <div class="stationDetails">
+                    <i class="fas fa-minus"></i> 
+                    <img class="logo" src="images/stationlogo.png">
+                    <i class="fas fa-plus"></i>
+                  </div>
+                  <span class="stationName nonActive" onclick="toggleStation(this)">Maximum FM</span>
+                  <span class="stationFrequency">142,2</span>
+               </li>
+            </ul>
+         </div>
+         <div id="footer">
+            <h2 id="footerHeader"></h2>
+            <p id="currentStation"></p>
+         </div>
+      </div>
+      <script src="script.js"></script>
+   </body>
+</html>

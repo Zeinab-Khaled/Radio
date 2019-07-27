@@ -1,0 +1,175 @@
+
+@import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/brands";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/regular";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/solid";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/v4-shims";
+$navbar-background: #edae61;
+$navbar-icons: #fff;
+$main-background: #21212b;
+$stations-color: #a2abbd;
+$stations-border: #43434d;
+$footer-background: #18181e;
+$b-radius: 30px;
+
+body {
+  background: $main-background;
+  font-family: Helvetica, sans-serif;
+}
+
+#player {
+  background: $main-background;
+  border-radius: 30px;
+  box-shadow: 0 10px 15px #000;
+  height: 1050px;
+  margin: 50px auto;
+  overflow-y: hidden;
+  position: relative;
+  max-width: 640px;
+}
+
+.navbar {
+  background-color: $navbar-background;
+  border-radius: 30px 30px 0 0;
+  height: 180px;
+  text-align: center;
+  i {
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  h1 {
+    color: $navbar-icons;
+    font-size: 3em;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 180px;
+    margin: 0 2.5em;
+    text-transform: uppercase;
+  }
+}
+
+.stations {
+  color: $stations-color;
+  max-height: 690px;
+  overflow-y: auto;
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  li {
+    border-bottom: 1px solid $stations-border;
+    font-size: 2em;
+    margin: 30px;
+    padding: 30px 0;
+  }
+  li:last-child {
+    border: none;
+  }
+  .stationDetails {
+    height: 0;
+    margin: 0;
+    overflow: hidden;
+    text-align: center;
+    transition: height, .5s, ease-in-out;
+  }
+  i {
+    font-size: .8em;
+    display: inline-block;
+    vertical-align: middle;
+    &:hover {
+      cursor: pointer;
+    }
+    padding: 20px;
+    border-radius: 50%;
+    border: 3px solid #a2aabd;
+  }
+  .logo {
+    display: inline-block;
+    vertical-align: middle;
+    border: 3px solid $stations-color;
+    border-radius: 50%;
+    height: 180px;
+    margin: 0 40px;
+    width: 180px;
+  }
+  .stationName:hover {
+    cursor: pointer;
+  }
+  .stationFrequency {
+    float: right;
+    font-weight: 700;
+  }
+}
+
+#footer {
+  background-color: $footer-background;
+  border: {
+    top: 1px solid $stations-border;
+    radius: 0 0 30px 30px;
+  }
+  ;
+  bottom: 0;
+  height: 180px;
+  position: absolute;
+  width: 100%;
+  h2 {
+    color: $navbar-background;
+    text: {
+      transform: uppercase;
+      align: center;
+    }
+    ;
+    font: {
+      size: 1em;
+      weight: 600;
+    }
+    ;
+    line-height: 0;
+    margin: 70px auto 0;
+  }
+}
+
+#currentStation {
+  color: $stations-color;
+  font-size: 2.2em;
+  line-height: 0;
+  text-align: center;
+}
+
+.stations::-webkit-scrollbar {
+  display: none;
+}
+
+//media queries:
+@media (max-width: 585px) {
+  #player {
+    height: 755px;
+    margin: 0;
+  }
+  .navbar {
+    height: 100px;
+    h1 {
+      font-size: 2em;
+      line-height: 100px;
+      margin: 0 2em;
+    }
+  }
+  .stations {
+    ul {
+      margin: 0;
+    }
+    li {
+      margin: 10px 20px;
+    }
+  }
+  #footer {
+    height: 100px;
+    h2 {
+      margin: 25px auto 0;
+    }
+  }
+}
